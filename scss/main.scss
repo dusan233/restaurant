@@ -1,0 +1,26 @@
+@import "./base/reset";
+@import "./base/typography";
+@import "./abstracts/variables";
+@import "./abstracts/functions";
+@import "./abstracts/mixins";
+@import "./layout/footer";
+@import "./layout/forms";
+@import "./layout/grid";
+@import "./layout/header";
+@import "./layout/navigation";
+@import "./layout/sidebar";
+@import "./modules/buttons";
+@import "./modules/carousel";
+@import "./modules/cards";
+
+.gsap {
+  width: 200px;
+  color: red;
+  background: wgite;
+  border: 2px solid red;
+  padding: 20px;
+  font-size: 20px;
+  font-weight: bold;
+  font-family: $mont;
+  margin: 20px auto;
+}

@@ -1,0 +1,103 @@
+footer {
+  background: $navbar-footer-bg;
+  color: white;
+  .wrap {
+    .top-part {
+      text-align: center;
+      padding: 70px 25px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+      .logo {
+        padding: 20px 0;
+        img {
+          width: 200px;
+        }
+      }
+      .text {
+        padding: 20px 0;
+        p {
+          color: $text-secondary;
+          font-family: $source-sans;
+          line-height: 1.6rem;
+          font-size: 17px;
+        }
+      }
+      .big-text {
+        padding: 20px 0;
+        h1 {
+          font-family: $mont;
+          font-size: 25px;
+        }
+      }
+      .pay-cards {
+        padding: 20px 0;
+      }
+      @include screen(med) {
+        display: flex;
+        text-align: left;
+        .text {
+          padding: 40px 20px;
+        }
+        .big-text {
+          padding: 40px 20px;
+          h1 {
+            font-size: 20px;
+          }
+        }
+        .logo {
+          padding: 40px 20px;
+        }
+        .pay-cards {
+          padding: 40px 20px;
+        }
+      }
+    }
+    .bottom-part {
+      padding: 40px 0;
+      text-align: center;
+      .copyright {
+        font-family: $source-sans;
+        padding: 20px 0;
+        a {
+          color: $red;
+        }
+      }
+      .footer-links {
+        padding: 20px 0;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        a {
+          color: $white;
+          text-decoration: none;
+          transition: 0.3s;
+          font-family: $source-sans;
+          font-weight: 500;
+          padding: 10px 20px;
+          &:hover {
+            color: $red;
+          }
+        }
+      }
+      .social-icons {
+        padding: 40px 0;
+        a {
+          color: $white;
+          margin-right: 10px;
+          &:last-child {
+            margin-right: 0;
+          }
+        }
+      }
+      @include screen(med) {
+        padding: 20px 20px;
+        @include flex(space-between, center) .copyright {
+          @include flex(center, center);
+        }
+      }
+    }
+    @include screen(large) {
+      width: 1100px;
+      margin: 0 auto;
+    }
+  }
+}

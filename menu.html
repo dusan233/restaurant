@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="./css/main.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css"
+    />
+
+    <title>Document</title>
+  </head>
+  <body>
+    <header id="header">
+      <div id="top-area" class="top-area">
+        <div class="wrap">
+          <div class="top-area-contact">
+            <div class="place">
+              <i class="fas fa-map-marker-alt"></i>
+              <span>19th Ave New York, NY 95822, USA</span>
+            </div>
+            <div class="number">
+              <i class="fas fa-phone-alt"></i>
+              <span>+1 916-875-2235</span>
+            </div>
+            <div class="working-hours">
+              <i class="far fa-clock"></i>
+              <span>Working hours: Monday - Sunday, 10:00-22:00</span>
+            </div>
+          </div>
+          <div class="top-area-social">
+            <i class="fab fa-facebook-f"></i>
+            <i class="fab fa-linkedin-in"></i>
+            <i class="fab fa-twitter"></i>
+            <i class="fab fa-instagram"></i>
+            <i class="fab fa-pinterest-p"></i>
+            <i class="fab fa-youtube"></i>
+          </div>
+          <div class="top-area-reserve">
+            <button class="reserve">
+              Reserve Table
+            </button>
+          </div>
+        </div>
+      </div>
+      <div id="navbar-container" class="navbar-container">
+        <div class="wrap">
+          <div class="logo-container">
+            <a href="index.html">
+              <img
+                src="./img/logo_5c19f0ccc4e28ae6c2ba0d48aa03396d_1x.png"
+                alt=""
+              />
+            </a>
+          </div>
+          <div class="navigation">
+            <ul class="nav-list">
+              <li class="nav-item"><a href="./index.html">HOME</a></li>
+              <li class="nav-item"><a href="about.html">ABOUT</a></li>
+              <li class="nav-item"><a href="./team.html">OUR TEAM</a></li>
+              <li class="nav-item"><a class="active" href="">MENU</a></li>
+              <li class="nav-item"><a href="./reservation.html">RESERVATION</a></li>
+              <li class="nav-item"><a href="./news.html">NEWS</a></li>
+              <li class="nav-item"><a href="./contact.html">CONTACT</a></li>
+            </ul>
+
+            <button id="search-button">
+              <i class="fas fa-search search-button"></i>
+            </button>
+
+            <i id="burger" class="fas fa-bars burger"></i>
+          </div>
+          <div id="searchbar" class="searchbar">
+            <input placeholder="Search..." type="text" />
+            <button><i class="fas fa-search search-button"></i></button>
+          </div>
+        </div>
+      </div>
+      <div id="sidebar" class="sidebar">
+        <ul>
+          <li><a href="./index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="team.html">Our Team</a></li>
+          <li><a class="active" href="">Menu</a></li>
+          <li><a href="./reservation.html">Reservation</a></li>
+          <li><a href="./news.html">News</a></li>
+          <li><a href="./contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </header>
+
+    <section class="menu-head">
+      <div class="video-wrap">
+        <video loop autoplay src="./img/Pexels-Videos-3972.mp4"></video>
+        <div class="overlay">
+          <div class="wrap ">
+            <h1 class="animated rubberBand">Our Menu</h1>
+            <img
+              class="animated jackInTheBox delay-1s"
+              src="./img/slider-art-lines.webp"
+              alt=""
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="menu-section">
+      <div class="head-content">
+        <h5>TRY & DISCOVER</h5>
+        <h1>OUR DISHES</h1>
+      </div>
+      <div class="tabs">
+        <ul>
+          <li class="tab-item active-tab">Starters</li>
+          <li class="tab-item">Drink</li>
+          <li class="tab-item">Meat</li>
+          <li class="tab-item">Breakfast</li>
+          <li class="tab-item">Desserts</li>
+          <li class="tab-item">Dinner</li>
+        </ul>
+      </div>
+      <div class="containeroer">
+        <div class="menu-item animated jackInTheBox" data-name="Starters">
+          <div class="img-container">
+            <img src="./img/menu/OnionRings-L.jpg" alt="onion rings" />
+          </div>
+          <div class="about-menu">
+            <h1>Onion Rings</h1>
+            <p>
+              Served with Chipotle Ranch dipping sauce. Full Order and Smaller
+              Portion available (price varies).
+            </p>
+            <p>$8.00</p>
+            <div class="price"></div>
+          </div>
+        </div>
+        <div class="menu-item animated jackInTheBox" data-name="Starters">
+          <div class="img-container">
+            <img
+              src="./img/menu/hazel_s_20fried_20pickles.0.jpg"
+              alt="onion rings"
+            />
+          </div>
+          <div class="about-menu">
+            <h1>Fried Pickles</h1>
+            <p>
+              Breaded and crispy-fried, served with Ranch dressing. Very
+              exquisite taste for real eaters.
+            </p>
+            <p>$8.00</p>
+            <div class="price"></div>
+          </div>
+        </div>
+        <div class="menu-item animated jackInTheBox" data-name="Starters">
+          <div class="img-container">
+            <img
+              src="./img/menu/blade_steaks_marinated_with_jalapeno_chiles_and_cilantro_hr1-1.jpg"
+              alt="onion rings"
+            />
+          </div>
+          <div class="about-menu">
+            <h1>Roast Chicken</h1>
+            <p>
+              Beef, red onion, baked salmon fillet, hollandaise sauce, rosemary
+              salt potatoes, herb salad.
+            </p>
+            <p>$8.00</p>
+            <div class="price"></div>
+          </div>
+        </div>
+        <div class="menu-item animated jackInTheBox" data-name="Starters">
+          <div class="img-container">
+            <img src="./img/menu/Fotolia_75558109.jpg" alt="onion rings" />
+          </div>
+          <div class="about-menu">
+            <h1>Chipotle Chicken Quesadilla</h1>
+            <p>
+              Beef, red onion, baked salmon fillet, hollandaise sauce, rosemary
+              salt potatoes, herb salad.
+            </p>
+            <p>$8.00</p>
+            <div class="price"></div>
+          </div>
+        </div>
+        <div class="menu-item animated jackInTheBox" data-name="Starters">
+          <div class="img-container">
+            <img src="./img/menu/mozz-sticks.jpg" alt="onion rings" />
+          </div>
+          <div class="about-menu">
+            <h1>MozzaSticks</h1>
+            <p>
+              Made of best sorts of Mozzarella. Served with Marinara dipping
+              sauce.
+            </p>
+            <p>$6.00</p>
+            <div class="price"></div>
+          </div>
+        </div>
+        <div class="menu-item animated jackInTheBox" data-name="Starters">
+          <div class="img-container">
+            <img
+              src="./img/menu/Doritos_chicken_strips_2.jpg"
+              alt="onion rings"
+            />
+          </div>
+          <div class="about-menu">
+            <h1>Chicken Strips</h1>
+            <p>
+              Lightly breaded chicken strips served with Honey Mustard dressing.
+              Garden Salad on the side.
+            </p>
+            <p>$6.00</p>
+            <div class="price"></div>
+          </div>
+        </div>
+        <div class="menu-item animated zoomIn" data-name="Drink">
+          <div class="img-container">
+            <img src="./img/menu/ginger-lemonade-3.jpg" alt="LEMONADE" />
+          </div>
+          <div class="about-menu">
+            <h1>Lemonade</h1>
+            <p>
+              Made of the best lemons and sharp peppermint to provide you with
+              the best refreshment
+            </p>
+            <p>$3.00</p>
+            <div class="price"></div>
+          </div>
+        </div>
+        <div class="menu-item animated zoomIn" data-name="Drink">
+          <div class="img-container">
+            <img src="./img/menu/Watermelon-Smoothie1.png" alt="LEMONADE" />
+          </div>
+          <div class="about-menu">
+            <h1>Watermelon Smoothie</h1>
+            <p>
+              Made of the best watermelons and sweet mint to provide you with
+              the best refreshment
+            </p>
+            <p>$3.00</p>
+            <div class="price"></div>
+          </div>
+        </div>
+        <div class="menu-item animated zoomIn" data-name="Drink">
+          <div class="img-container">
+            <img src="./img/menu/Coffee_2702966b.jpg" alt="LEMONADE" />
+          </div>
+          <div class="about-menu">
+            <h1>Coffee</h1>
+            <p>
+              The Best Coffee in town prepared out of the best coffee beans with
+              cinnamon.
+            </p>
+            <p>$3.00</p>
+            <div class="price"></div>
+          </div>
+        </div>
+        <div class="menu-item animated jackInTheBox" data-name="Meat">
+          <div class="img-container">
+            <img src="./img/menu/barbecue.jpg" alt="barbecue" />
+          </div>
+          <div class="about-menu">
+            <h1>Mega Royal Kebab</h1>
+            <p>
+              Baked salmon fillet, Beef, red onion, hollandaise sauce, rosemary
+              salt potatoes, garden salad
+            </p>
+            <p>$12.00</p>
+            <div class="price"></div>
+          </div>
+        </div>
+        <div class="menu-item animated jackInTheBox" data-name="Meat">
+          <div class="img-container">
+            <img src="./img/menu/El-Gaucho-Porterhouse-10.jpg" alt="barbecue" />
+          </div>
+          <div class="about-menu">
+            <h1>El Gaucho Special</h1>
+            <p>
+              Mixed Meats (700g) for 2 persons. Served with Vegetable Pincho and
+              grilled half-potatoes
+            </p>
+            <p>$12.00</p>
+            <div class="price"></div>
+          </div>
+        </div>
+        <div class="menu-item animated jackInTheBox" data-name="Meat">
+          <div class="img-container">
+            <img src="./img/menu/2.jpg" alt="barbecue" />
+          </div>
+          <div class="about-menu">
+            <h1>Steak Filet</h1>
+            <p>
+              Soft and tasty meat with spices and greens. Meat filet gets
+              incredible softness and aroma.
+            </p>
+            <p>$12.00</p>
+            <div class="price"></div>
+          </div>
+        </div>
+        <div class="menu-item animated jackInTheBox" data-name="Meat">
+          <div class="img-container">
+            <img src="./img/menu/IMG_8875.jpg" alt="barbecue" />
+          </div>
+          <div class="about-menu">
+            <h1>Pincho Skewers</h1>
+            <p>
+              Pincho Entrecote 200 g. with roasted vegetables: potatoes,
+              paprika, onions.
+            </p>
+            <p>$12.00</p>
+            <div class="price"></div>
+          </div>
+        </div>
+        <div class="menu-item animated zoomIn" data-name="Breakfast">
+          <div class="img-container">
+            <img src="./img/menu/calabrese-scramble.jpg" alt="scramble" />
+          </div>
+          <div class="about-menu">
+            <h1>Spinach & Mushroom Scramble</h1>
+            <p>
+              Egg Beaters scrambled with slow-roasted tomatoes, onion, fresh
+              spinach and mushrooms.
+            </p>
+            <p>$22.00</p>
+            <div class="price"></div>
+          </div>
+        </div>
+        <div class="menu-item animated zoomIn" data-name="Breakfast">
+          <div class="img-container">
+            <img src="./img/menu/o.jpg" alt="scramble" />
+          </div>
+          <div class="about-menu">
+            <h1>Southern Chicken Biscuit Platter</h1>
+            <p>
+              With two eggs, two smoked bacon strips and choice of hash browns,
+              breakfast potatoes or fruit.
+            </p>
+            <p>$22.00</p>
+            <div class="price"></div>
+          </div>
+        </div>
+        <div class="menu-item animated zoomIn" data-name="Breakfast">
+          <div class="img-container">
+            <img src="./img/menu/l586-belgian-waffle-lg.jpg" alt="scramble" />
+          </div>
+          <div class="about-menu">
+            <h1>Belgian Waffle Platter</h1>
+            <p>
+              Homemade Belgian waffle with two eggs and choice of two smoked
+              bacon strips or two sausage links.
+            </p>
+            <p>$22.00</p>
+            <div class="price"></div>
+          </div>
+        </div>
+        <div class="menu-item animated zoomIn" data-name="Breakfast">
+          <div class="img-container">
+            <img
+              src="./img/menu/l559-blueberry-banana-multigrain-pancakes-lg.jpg"
+              alt="scramble"
+            />
+          </div>
+          <div class="about-menu">
+            <h1>Blueberry Banana Multigrain Pancake Platter</h1>
+            <p>
+              Two multigrain nut pancakes loaded with blueberries and topped
+              with fresh bananas.
+            </p>
+            <p>$22.00</p>
+            <div class="price"></div>
+          </div>
+        </div>
+        <div class="menu-item animated zoomIn" data-name="Breakfast">
+          <div class="img-container">
+            <img
+              src="./img/menu/l372-grannys-country-omelette-lg.jpg"
+              alt="scramble"
+            />
+          </div>
+          <div class="about-menu">
+            <h1>Granny`s Country Omelette</h1>
+            <p>
+              Diced ham, onions, celery, green peppers, American cheese and
+              cheese sauce.
+            </p>
+            <p>$22.00</p>
+            <div class="price"></div>
+          </div>
+        </div>
+        <div class="menu-item animated zoomIn" data-name="Breakfast">
+          <div class="img-container">
+            <img src="./img/menu/228hambacon-omelette.jpg" alt="scramble" />
+          </div>
+          <div class="about-menu">
+            <h1>Smoked Bacon & Omelette Ham</h1>
+            <p>
+              Grilled diced ham, applewood smoked bacon and American
+              Philadelphia cheese inside and out.
+            </p>
+            <p>$22.00</p>
+            <div class="price"></div>
+          </div>
+        </div>
+        <div class="menu-item animated zoomIn" data-name="Breakfast">
+          <div class="img-container">
+            <img
+              src="./img/menu/l532-lg-everything-omelette.jpg"
+              alt="scramble"
+            />
+          </div>
+          <div class="about-menu">
+            <h1>Everything Omelette</h1>
+            <p>
+              Grilled ham, mushrooms, green peppers, tomatoes, onions, celery
+              and American cheese.
+            </p>
+            <p>$22.00</p>
+            <div class="price"></div>
+          </div>
+        </div>
+        <div class="menu-item animated zoomIn" data-name="Desserts">
+          <div class="img-container">
+            <img src="./img/menu/l316wildberry-lg.jpg" alt="" />
+          </div>
+          <div class="about-menu">
+            <h1>Wildberry (No sugar)</h1>
+            <p>
+              Seasonal ripe berries on a crispy crust with amazing smell and
+              long-lasting aftertaste.
+            </p>
+            <p>$22.00</p>
+            <div class="price"></div>
+          </div>
+        </div>
+        <div class="menu-item animated zoomIn" data-name="Desserts">
+          <div class="img-container">
+            <img src="./img/menu/l315lemon-meringue-lg.jpg" alt="" />
+          </div>
+          <div class="about-menu">
+            <h1>Lemon Meringue</h1>
+            <p>
+              Tangy lemon filling, light and fluffy on a crispy crust with
+              amazing smell and aftertaste.
+            </p>
+            <p>$22.00</p>
+            <div class="price"></div>
+          </div>
+        </div>
+        <div class="menu-item animated zoomIn" data-name="Desserts">
+          <div class="img-container">
+            <img src="./img/menu/l314caramel-apple-lg.jpg" alt="" />
+          </div>
+          <div class="about-menu">
+            <h1>Caramel Apple</h1>
+            <p>
+              Luscious apples with a crumb topping and rich caramel icing on a
+              crispy crust.
+            </p>
+            <p>$11.00</p>
+            <div class="price"></div>
+          </div>
+        </div>
+        <div class="menu-item animated zoomIn" data-name="Desserts">
+          <div class="img-container">
+            <img src="./img/menu/l309banana-cream-lg.jpg" alt="" />
+          </div>
+          <div class="about-menu">
+            <h1>Banana Cream</h1>
+            <p>
+              Loaded with hand-sliced bananas and topped with real whipped cream
+              and chopped walnuts.
+            </p>
+            <p>$11.00</p>
+            <div class="price"></div>
+          </div>
+        </div>
+        <div class="menu-item animated zoomIn " data-name="Dinner">
+          <div class="img-container">
+            <img src="./img/menu/l299-lg-chicken-pot-pie.jpg" alt="" />
+          </div>
+          <div class="about-menu">
+            <h1>Fresh Baked Chicken Pot Pie</h1>
+            <p>
+              Chunks of tender, all-white chicken with carrots, onions, celery
+              and peas in a rich cream.
+            </p>
+            <p>$22.00</p>
+            <div class="price"></div>
+          </div>
+        </div>
+        <div class="menu-item animated zoomIn" data-name="Dinner">
+          <div class="img-container">
+            <img src="./img/menu/IMG_6943.jpg" alt="" />
+          </div>
+          <div class="about-menu">
+            <h1>Mushroom `n Swiss Chicken</h1>
+            <p>
+              A grilled chicken breast topped with sautéed mushrooms and Swiss
+              cheese, served on herb rice.
+            </p>
+            <p>$22.00</p>
+            <div class="price"></div>
+          </div>
+        </div>
+        <div class="menu-item animated zoomIn" data-name="Dinner">
+          <div class="img-container">
+            <img src="./img/menu/l404-jumbo-shrimp-dinner-lg.jpg" alt="" />
+          </div>
+          <div class="about-menu">
+            <h1>Jumbo Shrimp Dinner</h1>
+            <p>
+              A generous portion of crispy jumbo butterfly shrimp served with
+              zesty cocktail sauce.
+            </p>
+            <p>$22.00</p>
+            <div class="price"></div>
+          </div>
+        </div>
+        <div class="menu-item animated zoomIn" data-name="Dinner">
+          <div class="img-container">
+            <img src="./img/menu/l405-turkey-dressing-lg.jpg" alt="" />
+          </div>
+          <div class="about-menu">
+            <h1>Butterball Turkey & Dressing</h1>
+            <p>
+              Oven-roasted and hand-carved slices, served on homestyle sage
+              dressing with hearty turkey.
+            </p>
+            <p>$22.00</p>
+            <div class="price"></div>
+          </div>
+        </div>
+        <div class="menu-item animated zoomIn " data-name="Dinner">
+          <div class="img-container">
+            <img src="./img/menu/l409-chicken-crisp-dinner-lg.jpg" alt="" />
+          </div>
+          <div class="about-menu">
+            <h1>Chicken Strips Dinner</h1>
+            <p>
+              Crispy all-white chicken breast strips, served with Honey Mustard
+              dipping sauce.
+            </p>
+            <p>$25.00</p>
+            <div class="price"></div>
+          </div>
+        </div>
+        <div class="menu-item animated zoomIn" data-name="Dinner">
+          <div class="img-container">
+            <img src="./img/menu/l445-apricot-grilled-salmon-lg.jpg" alt="" />
+          </div>
+          <div class="about-menu">
+            <h1>Apricot grilled salmon</h1>
+            <p>
+              A flaky, tender fillet with choice of apricot balsamic glaze or
+              lemon pepper seasoning.
+            </p>
+            <p>$24.00</p>
+            <div class="price"></div>
+          </div>
+        </div>
+        <div class="menu-item animated zoomIn" data-name="Dinner">
+          <div class="img-container">
+            <img src="./img/menu/l589-tuscan-grilled-chicken-lg.jpg" alt="" />
+          </div>
+          <div class="about-menu">
+            <h1>Tuscan Grilled Chicken</h1>
+            <p>
+              Lemon grilled chicken atop steamed spinach, topped with roasted
+              tomatoes and seasoned feta cheese.
+            </p>
+            <p>$24.00</p>
+            <div class="price"></div>
+          </div>
+        </div>
+        <div class="menu-item animated zoomIn" data-name="Dinner">
+          <div class="img-container">
+            <img
+              src="./img/menu/l576-honey-mustard-chicken-salad-lg.jpg"
+              alt=""
+            />
+          </div>
+          <div class="about-menu">
+            <h1>Honey Mustard Chicken Crunch</h1>
+            <p>
+              Crispy chicken strips, vegetables, applewood smoked bacon and
+              Honey Mustard dressing.
+            </p>
+            <p>$30.00</p>
+            <div class="price"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="pdf-menu">
+      <h1>FULL MENU PDF</h1>
+      <a
+        target="_blank"
+        href="https://codex-themes.com/thegem/sites/gem-restaurant/wp-content/uploads/2019/02/Restaurant.pdf"
+        class="btn-2"
+        >DISCOVER MENU PDF</a
+      >
+    </section>
+
+    <footer>
+      <div class="wrap">
+        <div class="top-part">
+          <div class="logo">
+            <img
+              src="./img/logo_5c19f0ccc4e28ae6c2ba0d48aa03396d_1x.png"
+              alt=""
+            />
+          </div>
+          <div class="text">
+            <p>
+              Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean
+              sollicitudin, lorem quis bibendum auctor, nisi elit consequat
+              ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet.
+            </p>
+          </div>
+          <div class="big-text">
+            <h1>WE TAKE VISA AND MASTERCARD</h1>
+          </div>
+          <div class="pay-cards">
+            <img src="./img/layer-23.webp" alt="" />
+          </div>
+        </div>
+        <div class="bottom-part">
+          <div class="copyright">2019 © Copyrights <a> DusanJovanovic</a></div>
+          <div class="footer-links">
+            <a href="">Support</a>
+            <a href="">Contact Us</a>
+            <a href="">Disclaimer</a>
+            <a href="">Privacy Policy</a>
+          </div>
+          <div class="social-icons">
+            <a href=""><i class="fab fa-facebook-f"></i></a>
+            <a href=""><i class="fab fa-linkedin-in"></i></a>
+            <a href=""><i class="fab fa-twitter"></i></a>
+            <a href=""><i class="fab fa-instagram"></i></a>
+            <a href=""><i class="fab fa-pinterest-p"></i></a>
+            <a href=""> <i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+    <script src="./js/menu.js"></script>
+    <script
+      src="https://kit.fontawesome.com/8cd6b70336.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

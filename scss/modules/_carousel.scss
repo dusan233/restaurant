@@ -1,0 +1,283 @@
+.slick {
+  width: 100%;
+  overflow: hidden;
+  img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+#slideshow {
+  position: relative;
+
+  .slick {
+    .slide {
+      padding: 100px 0;
+
+      .slide-content {
+        margin: 0 auto;
+        width: 80%;
+        transition: 1s;
+        position: relative;
+        padding: 100px 0;
+        @include screen(med) {
+          padding: 0;
+          width: 700px;
+        }
+        @include screen(large) {
+          margin: 0 auto 0 20%;
+        }
+        .wrap {
+          position: absolute;
+          top: 0;
+          @include center(vertical);
+
+          width: 100%;
+          @include screen(med) {
+            right: -240px;
+            width: 700px;
+          }
+          h1 {
+            font-size: 40px;
+            color: white;
+            font-family: $playfire;
+            opacity: 0;
+            transition: 1s;
+            transform: translate(200px, -200px) rotate(45deg);
+            @include screen(med) {
+              font-size: 80px;
+            }
+          }
+          .btn-1 {
+            transform: translate(200px, 200px) rotate(45deg);
+            opacity: 0;
+            transition: 1s;
+            transition-delay: 0.3s;
+          }
+          p {
+            color: $white;
+            font-family: $playfire;
+            font-size: 20px;
+            line-height: 2rem;
+            transform: translate(200px, 200px) rotate(45deg);
+            opacity: 0;
+            transition: 1s;
+          }
+        }
+        img {
+          width: 100%;
+          display: none;
+          transform: translateX(-100%);
+          opacity: 0;
+          transition: 1s;
+          @include screen(med) {
+            display: block;
+          }
+        }
+      }
+      .active-slide {
+        transform: translateX(0px);
+        opacity: 1;
+        img {
+          transform: translateX(0%);
+          opacity: 1;
+        }
+        .wrap {
+          h1 {
+            transform: translate(0px, -0px) rotate(0deg);
+            opacity: 1;
+          }
+          .btn-1 {
+            transform: translate(0px, -0px) rotate(0deg);
+            opacity: 1;
+          }
+          p {
+            transform: translate(0px, -0px) rotate(0deg);
+            opacity: 1;
+          }
+        }
+      }
+    }
+  }
+  .prev,
+  .next {
+    color: white;
+    position: absolute;
+    border: 0;
+    outline: 0;
+    width: 40px;
+    background: transparent;
+    font-size: 40px;
+    transition: 0.3s;
+    cursor: pointer;
+    display: none;
+    &:hover {
+      color: grey;
+    }
+    @include screen(med) {
+      display: block;
+    }
+  }
+  .prev {
+    @include center(vertical);
+    left: 10px;
+  }
+  .next {
+    @include center(vertical);
+    right: 10px;
+  }
+}
+
+.slide-1 {
+  @include backgroundImg(url("../../img/1-8.webp"), center);
+}
+.slide-2 {
+  @include backgroundImg(url("../../img/3-5.jpg"), center);
+}
+
+.testimonials {
+  text-align: center;
+  width: 100%;
+  background-color: $chef-recomended-bg;
+  box-sizing: border-box;
+  padding: 50px 50px;
+  position: relative;
+  .slick-testimonials {
+    padding: 50px 0;
+    width: 100%;
+    .testimonials-slide {
+      text-align: center;
+      width: 100%;
+      img {
+        display: block;
+        margin: 0 auto;
+        border-radius: 50%;
+      }
+      h5 {
+        font-family: $mont;
+        margin: 20px 0 5px 0;
+        font-size: 17px;
+      }
+      h6 {
+        font-family: $source-sans;
+        font-size: 13px;
+      }
+      p {
+        font-family: $source-sans;
+        color: $text-secondary;
+        margin: 20px 0;
+      }
+      span {
+        color: $red;
+        font-size: 40px;
+      }
+      @include screen(large) {
+        padding: 0 50px;
+      }
+    }
+    @include screen(large) {
+      width: 1100px;
+      margin: 0 auto;
+      p {
+        font-size: 25px;
+      }
+    }
+  }
+
+  @include screen(large) {
+    padding: 50px 0;
+  }
+}
+
+.prev-testimonial,
+.next-testimonial {
+  color: $black;
+  position: absolute;
+  border: 0;
+  outline: 0;
+  width: 40px;
+  background: transparent;
+  font-size: 40px;
+  transition: 0.3s;
+  cursor: pointer;
+  display: none;
+  &:hover {
+    color: $red;
+  }
+  @include screen(med) {
+    display: block;
+  }
+}
+
+.prev-testimonial {
+  @include center(vertical);
+  left: 15%;
+}
+
+.next-testimonial {
+  @include center(vertical);
+  right: 15%;
+}
+
+.foto-gallery {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 100px 20px;
+  text-align: center;
+  .head-content {
+    margin-bottom: 130px;
+  }
+  .wrap {
+    box-sizing: border-box;
+    position: relative;
+    .foto-slider {
+      width: 100%;
+      .slide {
+        height: 300px;
+        img {
+          width: 80%;
+          display: block;
+          margin: 0 auto;
+          cursor: pointer;
+        }
+        box-sizing: border-box;
+        @include screen(large) {
+          width: 250px;
+        }
+      }
+    }
+    @include screen(large) {
+      width: 1100px;
+      margin: 0px auto;
+    }
+  }
+}
+
+.next-foto {
+  right: 27px;
+}
+.prev-foto {
+  left: 27px;
+}
+
+.prev-foto,
+.next-foto {
+  border: 0;
+  position: absolute;
+  outline: 0;
+  width: 40px;
+  display: none;
+  height: 30px;
+  font-size: 25px;
+  background: $black;
+  color: $white;
+  cursor: pointer;
+  transition: 0.3s;
+  @include center(vertical);
+  &:hover {
+    background: $red;
+  }
+  @include screen(large) {
+    display: block;
+  }
+}

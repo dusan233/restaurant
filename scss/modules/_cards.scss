@@ -1,0 +1,390 @@
+.little-info-card {
+  padding: 50px 0;
+  transform: translateY(50px);
+  opacity: 0;
+  .icon {
+    font-size: 40px;
+    color: $little-info-icons;
+  }
+  h2 {
+    color: $white;
+    font-family: $mont;
+    margin: 15px 0;
+    font-size: 22px;
+  }
+  p {
+    font-family: $source-sans;
+    color: $text-secondary;
+  }
+  @include screen(med-small) {
+    width: 40%;
+    margin: 0 5%;
+  }
+  @include screen(large) {
+    width: 20%;
+    margin: 0 2.5%;
+  }
+}
+
+.recomended-card {
+  width: 100%;
+
+  transform: scale(0.4);
+  opacity: 0;
+  .img-container {
+    padding: 50px 50px 10px 50px;
+    img {
+      width: 100%;
+    }
+  }
+  .text {
+    padding: 0 50px;
+    h2 {
+      color: $black;
+      font-family: $mont;
+      margin: 15px 0;
+      font-size: 22px;
+    }
+    p {
+      font-family: $source-sans;
+      color: $text-secondary;
+      line-height: 1.5rem;
+      margin-top: 10px;
+    }
+  }
+  @include screen(med-small) {
+    width: 40%;
+    margin: 0 5%;
+  }
+  @include screen(large) {
+    width: 30%;
+    margin: 0 1.6%;
+  }
+}
+
+.contact-info-card {
+  position: relative;
+  padding: 60px 50px;
+  border: 2px solid $text-secondary;
+  margin-bottom: 40px;
+  box-sizing: border-box;
+  background: rgba(0, 0, 0, 0.3);
+  transition: 0.3s;
+  cursor: pointer;
+  h2 {
+    color: white;
+    font-family: $mont;
+    transition: 0.3s;
+  }
+  p {
+    color: $text-secondary;
+    margin: 30px 0 0 0;
+    font-family: $source-sans;
+    font-size: 18px;
+    transition: 0.3s;
+  }
+  .ci-badge {
+    width: 30px;
+    height: 30px;
+    transform: translateY(100px);
+    position: absolute;
+    top: -28px;
+    background: $red;
+    @include flex(center, center);
+    @include center(horizontal);
+    border-radius: 50%;
+    color: $white;
+
+    transition: 0.3s;
+    &::before {
+      content: "";
+      position: absolute;
+      width: 0%;
+      height: 0%;
+      border-radius: 50%;
+      background: $white;
+      @include center(vertical);
+      transition: 0.3s;
+      z-index: -1;
+    }
+  }
+
+  @include screen(med-small) {
+    width: 45%;
+    margin: 30px 2.5%;
+  }
+  @include screen(large) {
+    width: 30%;
+    margin: 0 1.6%;
+  }
+
+  &:hover {
+    border: 2px solid #201f1f;
+    background: #201f1f;
+    h2 {
+      color: $red;
+    }
+    p {
+      color: $white;
+    }
+    .ci-badge {
+      color: $red;
+
+      &::before {
+        width: 85%;
+        height: 85%;
+      }
+    }
+  }
+}
+
+.count-card {
+  padding: 50px 0;
+  i {
+    font-size: 40px;
+  }
+  .number {
+    display: block;
+    font-size: 60px;
+    margin: 20px 0;
+    font-family: $source-sans;
+    font-weight: 600;
+  }
+  p {
+    font-family: $source-sans;
+  }
+  @include screen(med-small) {
+    width: 30%;
+    margin: 0 1.6%;
+  }
+}
+
+.service-card {
+  cursor: pointer;
+  background: $white;
+  padding: 50px 40px;
+  margin-bottom: 40px;
+  &:last-child {
+    margin-bottom: 0px;
+  }
+  h1 {
+    margin: 20px 0;
+    font-family: $mont;
+    font-size: 20px;
+  }
+  p {
+    font-family: $source-sans;
+    color: $text-secondary;
+  }
+  .icon {
+    width: 80px;
+    height: 80px;
+    transform: scale(0);
+    background: $red;
+    color: $white;
+    @include flex(center, center);
+    margin: 0 auto;
+    border-radius: 50%;
+    font-size: 35px;
+    position: relative;
+    z-index: 1;
+    transition: 0.3s;
+    i {
+      transition: 0.3s;
+    }
+    &::after {
+      position: absolute;
+      content: "";
+      width: 0%;
+      height: 0%;
+      background-color: $white;
+      border-radius: 50%;
+      z-index: -1;
+      transition: 0.3s;
+    }
+  }
+  &:hover .icon::after {
+    width: 90%;
+    height: 90%;
+  }
+  &:hover .icon i {
+    color: $red;
+  }
+  @include screen(med-small) {
+    width: 40%;
+    margin: 10px 5%;
+  }
+  @include screen(large) {
+    width: 30%;
+    margin: 0px 1.6%;
+  }
+}
+
+.icon.service-card-active {
+  transform: scale(1);
+}
+
+.meet-team-card {
+  padding: 20px;
+  .img-container {
+    border-radius: 50%;
+    border: 3px solid $little-info-icons;
+    padding: 5px;
+    img {
+      width: 100%;
+      border-radius: 50%;
+      display: block;
+      height: auto;
+    }
+  }
+  h1 {
+    font-family: $mont;
+    font-size: 20px;
+    margin: 20px 0 5px 0;
+  }
+  h2 {
+    font-family: $mont;
+    font-size: 17px;
+    margin-bottom: 20px;
+  }
+  p {
+    font-family: $source-sans;
+    color: $text-secondary;
+    margin-bottom: 20px;
+  }
+  .social-icons {
+    span {
+      border-radius: 50%;
+      background: $text-secondary;
+      color: white;
+      display: inline-block;
+      height: 30px;
+      width: 30px;
+      position: relative;
+      margin-right: 10px;
+      cursor: pointer;
+      &:last-child {
+        margin-right: 0;
+      }
+      i {
+        @include center(both);
+      }
+    }
+  }
+  @include screen(med-small) {
+    width: 40%;
+    margin: 0 5%;
+  }
+  @include screen(large) {
+    width: 20%;
+    margin: 0 2.5%;
+    h1 {
+      font-size: 15px;
+    }
+  }
+}
+
+.menu-item {
+  cursor: pointer;
+  display: flex;
+  width: 100%;
+  transition: 0.3s;
+  &:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+  }
+  .img-container {
+    img {
+      width: 100%;
+      display: block;
+      height: auto;
+    }
+  }
+  .about-menu {
+    padding: 100px 40px;
+    position: relative;
+    h1 {
+      font-family: $mont;
+    }
+    p {
+      margin-top: 20px;
+      font-family: $source-sans;
+      color: $text-secondary;
+    }
+    .price {
+      position: absolute;
+      width: 50px;
+      height: 50px;
+      background: $red;
+      transform: rotate(45deg) translateX(-50%);
+      top: -8px;
+      left: 50%;
+      color: $white;
+    }
+  }
+  @include screen(med-small) {
+    width: 40%;
+    margin: 20px 5%;
+    display: inline-flex;
+    flex-direction: row;
+    .img-container {
+      flex: 1;
+    }
+    .about-menu {
+      flex: 1;
+    }
+  }
+  @include screen(large) {
+    display: flex;
+    width: 30%;
+    margin: 20px 1.6%;
+  }
+  @include screen(custom, 1600) {
+    width: 20%;
+    margin: 20px 2.5%;
+  }
+}
+
+.news-item {
+  transform: translateY(100px);
+  opacity: 0;
+  margin: 40px 0;
+  transition: 0.5s;
+  .img-container {
+    img {
+      width: 100%;
+      display: block;
+      height: auto;
+    }
+    cursor: pointer;
+  }
+  .content {
+    text-align: left;
+    background: $white;
+    padding: 25px 20px;
+    h1 {
+      font-weight: 300;
+      font-family: $mont;
+      font-size: 23px;
+    }
+    p {
+      font-family: $source-sans;
+      color: $text-secondary;
+      margin: 40px 0;
+    }
+  }
+  .buttons {
+    text-align: left;
+  }
+  @include screen(med-small) {
+    width: 40%;
+    margin: 20px 5%;
+  }
+  @include screen(large) {
+    width: 30%;
+    margin: 20px 1.6%;
+  }
+}
+.news-item.show {
+  transform: translateY(0px);
+  opacity: 1;
+}

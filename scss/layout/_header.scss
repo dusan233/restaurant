@@ -1,0 +1,212 @@
+header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 100;
+
+  .top-area {
+    display: none;
+    @include screen(large) {
+      display: block;
+      background-color: $header-bg;
+      border-top: 5px solid $nav-link-hover-color;
+      font-family: $source-sans;
+      .wrap {
+        width: 1100px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        .top-area-contact {
+          @include flex(space-between);
+          flex: 3.5;
+          padding: 14px 40px 14px 10px;
+          i {
+            color: $red;
+            margin-right: 10px;
+          }
+          span {
+            color: $nav-link-color;
+            font-size: 14px;
+            font-weight: 400;
+          }
+        }
+        .top-area-social {
+          @include flex(center);
+          border-left: 1px solid rgba(255, 255, 255, 0.2);
+          border-right: 1px solid rgba(255, 255, 255, 0.2);
+          flex: 1;
+          padding: 14px 5px;
+          i {
+            color: $nav-link-color;
+            margin-right: 10px;
+            cursor: pointer;
+            transform: 0.3s;
+            &:hover {
+              color: $nav-link-hover-color;
+            }
+            &:last-child {
+              margin-right: 0px;
+            }
+          }
+        }
+        .top-area-reserve {
+          @include flex(center);
+          flex: 1;
+          padding: 14px 5px;
+          .reserve {
+            border: 0;
+            outline: 0;
+            color: $white;
+            background-color: $nav-link-color;
+            padding: 6px 10px;
+            border-radius: 3px;
+            transition: 0.3s;
+            cursor: pointer;
+            &:hover {
+              background-color: $nav-link-hover-color;
+            }
+          }
+        }
+      }
+    }
+  }
+  .navbar-container {
+    background-color: $navbar-footer-bg;
+    font-family: $mont;
+    width: 100%;
+
+    @include screen(med) {
+      padding: 0px 6px;
+    }
+    @include screen(large) {
+      padding: 0px;
+    }
+    .wrap {
+      display: flex;
+      position: relative;
+      @include screen(med) {
+        padding: 13px 0;
+      }
+      @include screen(large) {
+        margin: 0 auto;
+        width: 1100px;
+      }
+      .logo-container {
+        padding: 8px 10px;
+        width: 150px;
+        @include screen(med) {
+          img {
+            width: 100%;
+          }
+        }
+      }
+      .navigation {
+        flex: 1;
+        @include flex(flex-end, center);
+        .burger {
+          font-size: 23px;
+          color: white;
+          margin-right: 10px;
+          cursor: pointer;
+          @include screen(med) {
+            display: none;
+          }
+        }
+        .nav-list {
+          display: none;
+          @include screen(med) {
+            display: block;
+            height: 100%;
+            list-style-type: none;
+            @include flex(center, center);
+            .nav-item {
+              a {
+                text-decoration: none;
+                color: $nav-link-color;
+                font-size: 15px;
+                font-weight: 600;
+                padding: 3px 16px;
+                transition: 0.3s;
+                &:hover {
+                  color: $nav-link-hover-color;
+                }
+                &:last-child {
+                  margin-right: 0px;
+                }
+              }
+              .active {
+                color: $white;
+                border: 2px solid $white;
+                &:hover {
+                  color: $white;
+                }
+              }
+            }
+          }
+        }
+        button {
+          background-color: $navbar-footer-bg;
+          border: 0;
+          outline: 0;
+          width: 50px;
+          .search-button {
+            display: none;
+            @include screen(med) {
+              display: block;
+              color: $nav-link-color;
+              margin: 0 10px;
+              cursor: pointer;
+              transition: 0.3s;
+              &:hover {
+                color: $nav-link-hover-color;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.searchbar {
+  z-index: 100;
+  pointer-events: none;
+  display: flex;
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+  right: 30px;
+  top: 120%;
+  padding: 20px;
+  transition: 0.3s;
+  background-color: $header-bg;
+  input {
+    background-color: $navbar-footer-bg;
+    padding: 10px;
+    border: none;
+    outline: none;
+    font-size: 18px;
+    color: white;
+  }
+  button {
+    border: 0;
+    padding: 11px;
+    outline: 0;
+    background-color: $navbar-footer-bg;
+    cursor: pointer;
+  }
+  i {
+    display: inline-block;
+    color: white;
+    font-size: 20px;
+    height: 100%;
+  }
+}
+
+.show-searchbar {
+  pointer-events: visible;
+  opacity: 1;
+  visibility: visible;
+  top: 100%;
+}

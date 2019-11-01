@@ -1,0 +1,671 @@
+.intro {
+  @include backgroundImg(url("../../img/bg_top.jpg"), center);
+  overflow: hidden;
+  .intro-content {
+    transform: translateY(50%);
+    opacity: 0;
+    box-sizing: border-box;
+    width: 100%;
+    text-align: center;
+    padding: 100px 20px;
+    @include screen(med) {
+      width: 980px;
+      margin: 0 auto;
+    }
+    p {
+      font-family: $source-sans;
+      color: $text-secondary;
+      line-height: 1.7rem;
+    }
+  }
+}
+
+.menu-pdf {
+  position: relative;
+  padding: 250px 0;
+  @include backgroundImg(url("../../img/21-1.jpg"), center);
+  background-attachment: fixed;
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+
+    @include flex(center, center);
+    .content {
+      width: 500px;
+      text-align: center;
+      padding: 0 30px;
+      h1 {
+        font-family: $mont;
+        font-size: 50px;
+        color: $white;
+      }
+      p {
+        color: $white;
+        margin: 30px 0;
+        font-family: $source-sans;
+        font-size: 20px;
+      }
+    }
+  }
+}
+
+.little-info {
+  @include backgroundImg(url("../../img/bg_bottom.webp"), top);
+  padding: 50px;
+  text-align: center;
+
+  .content-little {
+    width: 100%;
+
+    @include screen(med-small) {
+      display: flex;
+      flex-wrap: wrap;
+      padding: 40px 0;
+    }
+    @include screen(large) {
+      width: 1080px;
+      margin: 0 auto;
+    }
+  }
+  @include screen(large) {
+    padding: 50px 0;
+  }
+}
+
+.chef-recomended {
+  text-align: center;
+  padding: 100px 0;
+  @extend .little-info;
+  width: 100%;
+  background: $chef-recomended-bg;
+  .content-little {
+    @include screen(large) {
+      width: 1100px;
+      margin: 0 auto;
+    }
+  }
+}
+
+.head-content {
+  font-family: $mont;
+  font-weight: 200;
+
+  h5 {
+    color: $text-secondary;
+    font-size: 18px;
+  }
+  h1 {
+    margin: 10px 0 70px 0;
+    font-size: 27px;
+    position: relative;
+    @include screen(med) {
+      font-size: 38px;
+    }
+    &::after {
+      position: absolute;
+      content: "";
+      width: 100px;
+      height: 4px;
+      background: $red;
+      @include center(horizontal);
+      top: 190%;
+    }
+  }
+}
+
+.head-content2 {
+  @extend .head-content;
+  color: white;
+}
+
+.contact-info {
+  text-align: center;
+  padding: 100px 0;
+  @include backgroundImg(url("../../img/8.webp"), center);
+  .cards-container {
+    padding: 50px 6% 0 6%;
+    box-sizing: border-box;
+    @include screen(med-small) {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    @include screen(large) {
+      width: 1140px;
+      margin: 0 auto;
+      padding: 50px 0;
+    }
+  }
+}
+
+.news-letter {
+  padding: 100px 20px;
+  @include backgroundImg(url("../../img/2.jpg"), center);
+  .wrap {
+    .text {
+      h1 {
+        font-family: $mont;
+        color: white;
+        font-size: 27px;
+        .thin-text {
+          font-weight: 100;
+        }
+      }
+      p {
+        font-family: $source-sans;
+        color: $white;
+        margin: 30px 0;
+        line-height: 1.7rem;
+      }
+    }
+    .subscribe {
+      input {
+        width: 100%;
+        border: 0;
+        outline: 0;
+        padding: 15px 10px;
+        border-radius: 4px;
+        text-align: center;
+        font-size: 17px;
+        margin-bottom: 13px;
+      }
+      .note {
+        color: white;
+        font-family: $source-sans;
+      }
+    }
+    @include screen(med) {
+      display: flex;
+      .text {
+        flex: 2;
+        padding: 0 20px;
+      }
+      .subscribe {
+        flex: 1;
+        padding: 0 20px;
+      }
+    }
+    @include screen(large) {
+      width: 1100px;
+      margin: 0 auto;
+      .text {
+        padding: 0;
+        h1 {
+          font-size: 40px;
+        }
+        p {
+          margin: 0;
+          margin-top: 20px;
+        }
+      }
+      .subscribe {
+        padding: 0;
+      }
+    }
+  }
+}
+
+.about-head {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  @include backgroundImg(url("../../img/1.jpg"), center);
+  .overlay {
+    text-align: center;
+    position: absolute;
+    padding: 0 40px;
+    top: 0;
+
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.3);
+    .wrap {
+      @include center(both);
+      h1 {
+        font-family: $kaush;
+        color: $white;
+        font-size: 50px;
+        margin-bottom: 20px;
+      }
+      img {
+        width: 100%;
+      }
+    }
+  }
+}
+
+.menu-head {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  .video-wrap {
+    position: absolute;
+
+    top: 0;
+
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.6);
+    overflow: hidden;
+    video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .overlay {
+      text-align: center;
+      position: absolute;
+      padding: 0 40px;
+      top: 0;
+
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: rgba(0, 0, 0, 0.3);
+      .wrap {
+        @include center(both);
+        h1 {
+          font-family: $kaush;
+          color: $white;
+          font-size: 50px;
+          margin-bottom: 20px;
+        }
+        img {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+.about-intro {
+  .wrap {
+    padding: 100px 30px;
+    text-align: center;
+    .img-wrap {
+      img {
+        width: 100%;
+      }
+      @include flex(center, center);
+    }
+    .text {
+      padding: 50px 0;
+      p {
+        font-family: $source-sans;
+        color: $text-secondary;
+        line-height: 1.6rem;
+      }
+    }
+    .first {
+      @include screen(med-small) {
+        display: flex;
+        .img-wrap {
+          flex: 1;
+          padding: 15px;
+          img {
+            @include screen(large) {
+              margin-bottom: -30px;
+            }
+          }
+        }
+        .text {
+          flex: 1;
+          padding: 100px 15px;
+        }
+      }
+    }
+    .second {
+      @include screen(med-small) {
+        display: flex;
+        .img-wrap {
+          flex: 1;
+          padding: 15px;
+          img {
+            @include screen(large) {
+              margin-top: -40px;
+            }
+          }
+        }
+        .text {
+          flex: 1;
+          padding: 55px 15px;
+        }
+      }
+    }
+    @include screen(large) {
+      width: 1140px;
+      margin: 0 auto;
+    }
+  }
+}
+
+.count-up {
+  @include backgroundImg(url("../../img/2.jpg"), center);
+  color: $white;
+  .wrap {
+    text-align: center;
+    @include screen(med-small) {
+      display: flex;
+      padding: 50px 0;
+    }
+    @include screen(large) {
+      width: 1140px;
+      margin: 0 auto;
+    }
+  }
+}
+
+.services {
+  @include backgroundImg(url("../../img/3.webp"), center);
+  padding: 100px 0;
+  text-align: center;
+  .wrap {
+    padding: 0 20px;
+    padding-top: 40px;
+    @include screen(med-small) {
+      display: flex;
+      flex-wrap: wrap;
+    }
+    @include screen(large) {
+      width: 1150px;
+      margin: 0 auto;
+    }
+  }
+}
+
+.img-big {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 1000;
+  display: none;
+  color: white;
+  box-sizing: border-box;
+  span {
+    float: right;
+    padding: 20px;
+    font-size: 30px;
+    cursor: pointer;
+  }
+  img {
+    width: 350px;
+    @include center(both);
+    @include screen(large) {
+      width: 35%;
+    }
+  }
+}
+
+.team-head {
+  @extend .about-head;
+  @include backgroundImg(url("../../img/gallery/1-7.jpg"), center);
+}
+
+.meet-team {
+  padding: 100px 0;
+  text-align: center;
+  .wrap {
+    padding: 30px;
+    @include screen(med-small) {
+      display: flex;
+      flex-wrap: wrap;
+    }
+    @include screen(custom, 1300) {
+      width: 1250px;
+      margin: 0 auto;
+    }
+  }
+}
+
+.menu-section {
+  padding: 100px 0;
+  text-align: center;
+  .tabs {
+    margin: 200px 0 50px 0;
+    ul {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      font-size: 25px;
+      list-style-type: none;
+      font-family: $mont;
+      font-weight: 600;
+      color: $black;
+      li {
+        padding: 10px 20px;
+        cursor: pointer;
+      }
+      li.active-tab {
+        color: $red;
+        border-bottom: 2px solid $red;
+      }
+    }
+  }
+  .containeroer {
+    @include screen(med-small) {
+      display: flex;
+      flex-wrap: wrap;
+    }
+  }
+}
+
+.pdf-menu {
+  padding: 50px 0;
+  text-align: center;
+  background: $chef-recomended-bg;
+  h1 {
+    font-size: 40px;
+    font-family: $mont;
+  }
+}
+.news-head {
+  @extend .about-head;
+  @include backgroundImg(url("../../img/1-6.jpg"), center);
+}
+
+.contact-head {
+  @extend .about-head;
+  @include backgroundImg(url("../../img/16-1.jpg"), center);
+}
+
+.news {
+  text-align: center;
+  padding: 100px 0px;
+  background: $chef-recomended-bg;
+  .wrap {
+    padding: 20px;
+    @include screen(med-small) {
+      display: flex;
+      flex-wrap: wrap;
+    }
+    @include screen(custom, 1550) {
+      width: 1480px;
+      margin: 0 auto;
+    }
+  }
+}
+
+.contact-social-icons {
+  padding: 100px 0;
+  text-align: center;
+  @include backgroundImg(url("../../img/4.jpg"), center);
+  .icon-container {
+    padding: 50px 0;
+    span {
+      width: 50px;
+      height: 50px;
+      background: $black;
+      border-radius: 50%;
+      font-size: 30px;
+      color: $white;
+      position: relative;
+      display: inline-block;
+      cursor: pointer;
+      margin-right: 20px;
+      transition: 0.3s;
+      &:last-child {
+        margin-right: 0px;
+      }
+      i {
+        @include center(both);
+      }
+    }
+    .fb {
+      &:hover {
+        background: #4e64b5;
+      }
+    }
+    .tw {
+      &:hover {
+        background: #00aced;
+      }
+    }
+    .yt {
+      &:hover {
+        background: #c82929;
+      }
+    }
+    .ig {
+      &:hover {
+        background: #9a8f62;
+      }
+    }
+    .pt {
+      &:hover {
+        background: #ff5757;
+      }
+    }
+  }
+}
+
+.form-section {
+  padding: 100px 0;
+  text-align: center;
+  .number {
+    padding: 30px;
+    img {
+      width: 100%;
+      @include screen(med-small) {
+        width: 600px;
+      }
+    }
+    h1 {
+      font-family: $mont;
+      font-size: 35px;
+    }
+    p {
+      font-family: $mont;
+      font-weight: 800;
+      margin: 30px 0 0 0;
+    }
+    a {
+      color: $red;
+      text-decoration: none;
+      font-family: $mont;
+      font-weight: bold;
+    }
+  }
+}
+
+.reservation-head {
+  @extend .about-head;
+  @include backgroundImg(url("../../img/1.webp"), center);
+}
+
+.reservation-info {
+  text-align: center;
+  img {
+    width: 100%;
+  }
+  .corporate {
+    .img-container {
+      @include backgroundImg(url("../../img/7.webp"), center);
+      min-height: 350px;
+    }
+  }
+  .weeding {
+    .img-container {
+      min-height: 350px;
+      @include backgroundImg(url("../../img/6.webp"), center);
+      object-fit: scale-down;
+    }
+  }
+  .corporate,
+  .weeding {
+    .text {
+      background: $chef-recomended-bg;
+      padding: 0 30px 30px 30px;
+      .head-content {
+        padding: 50px 0;
+      }
+      p {
+        font-family: $source-sans;
+        color: $text-secondary;
+      }
+      .icons {
+        margin-top: 30px;
+        div {
+          margin: 40px 0;
+          i {
+            color: $red;
+            font-size: 20px;
+            margin-bottom: 10px;
+          }
+          @include screen(med-small) {
+            margin-right: 30px;
+            &:last-child {
+              margin-right: 0;
+            }
+          }
+        }
+        @include screen(med-small) {
+          @include flex(center, center);
+        }
+      }
+      @include screen(med-small) {
+        padding: 50px 80px;
+      }
+    }
+    @include screen(med) {
+      display: flex;
+      .img-container {
+        width: 50%;
+      }
+      .text {
+        width: 50%;
+      }
+    }
+  }
+  @include screen(med) {
+    .weeding {
+      .img-container {
+        order: 2;
+      }
+      .text {
+        order: 1;
+      }
+    }
+  }
+}
+
+.spiner {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  background: red;
+
+  z-index: 1000;
+}

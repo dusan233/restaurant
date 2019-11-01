@@ -1,0 +1,40 @@
+.sidebar {
+  position: absolute;
+  z-index: 100;
+  width: 70%;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-bottom: none;
+  font-family: $mont;
+  font-weight: 600;
+  transition: 0.3s;
+  top: 175%;
+  pointer-events: none;
+  opacity: 0;
+  visibility: hidden;
+
+  @include center("horizontal");
+  ul {
+    list-style-type: none;
+    li {
+      a {
+        text-decoration: none;
+        color: $text-secondary;
+        display: block;
+        padding: 15px 22px;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+        background: $sidebar;
+      }
+    }
+    .active {
+      background-color: $white;
+      color: $red;
+    }
+  }
+}
+
+.show-sidebar {
+  top: 100%;
+  pointer-events: visible;
+  opacity: 1;
+  visibility: visible;
+}

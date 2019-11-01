@@ -1,0 +1,56 @@
+.contact-form {
+  padding: 0 30px;
+  .inputs {
+    input {
+      width: 100%;
+      margin: 20px 0;
+      padding: 10px;
+      font-size: 17px;
+      border: 1px solid rgba(0, 0, 0, 0.1);
+      outline: none;
+      background: #f7f7f7;
+      border-radius: 3px;
+    }
+    select {
+      width: 100%;
+      margin: 20px 0;
+      padding: 10px;
+      font-size: 17px;
+      border: 1px solid rgba(0, 0, 0, 0.1);
+      outline: none;
+      background: #f7f7f7;
+      border-radius: 3px;
+    }
+    @include screen(med) {
+      display: flex;
+      input {
+        width: 30%;
+        margin: 20px 4.9% 20px 0;
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+      select {
+        width: 30%;
+        margin: 20px 4.9% 20px 0;
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+    }
+  }
+  textarea {
+    width: 100%;
+    padding: 10px;
+    font-family: $mont;
+    outline: 0;
+    background: #f7f7f7;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    font-size: 17px;
+    border-radius: 3px;
+  }
+  @include screen(large) {
+    width: 1140px;
+    margin: 0 auto;
+  }
+}
